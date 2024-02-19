@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Assaigment-05</title>
     <!-- tailwind and daisy ui  -->
     <link href="https://cdn.jsdelivr.net/npm/daisyui@4.7.2/dist/full.min.css" rel="stylesheet" type="text/css" />
     <script src="https://cdn.tailwindcss.com"></script>
@@ -68,7 +68,7 @@
 
                     </ul>
                 </div>
-                <a class=" text-xl md:text-4xl  font-extrabold te">P-Ticket</a>
+                <a class=" text-xl md:text-4xl  font-extrabold te">OAI-Ticket</a>
             </div>
             <div class="navbar-center hidden lg:flex">
                 <ul class="menu menu-horizontal px-1">
@@ -95,14 +95,10 @@
                         <h1
                             class="text-white text-3xl md:text-5xl md:leading-[70px] lg:text-6xl font-extrabold   lg:leading-[84px]">
                             End-to-End Travel with
-                            <br><span class="text-color">P Paribahan</span>
+                            <br><span class="text-color">OAI Paribahan</span>
                         </h1>
-                        <p class="text-xl text-white py-4 md:py-8">Yes, you can run unit tests and view the results
-                            directly
-                            within
-                            the app. The
-                            integrated testing features allow for a streamlined .</p>
-                        <button class="btn bg-color text-xl font-semibold">Buy Tickets</button>
+                        <p class="text-xl text-white py-4 md:py-8">OAI Poribahan provides efficient<br>transportation services with a focus on safety,<br> accessibility, and reliability for commuters.</p>
+                        <button class="btn bg-color text-xl font-semibold" id="buy-tickets">Buy Tickets</button>
                     </div>
                 </div>
 
@@ -190,9 +186,8 @@
 
         <section>
             <div class="container mx-auto max-w-[90%] lg:max-w-[80%]">
-                <h2 class="text-4xl font-bold text-center">P.H Paribahan</h2>
-                <p class="text-center pt-5 text-xl">Yes, you can run unit tests and view the results directly within the
-                    app. The integrated testing features allow for a streamlined .</p>
+                <h2 class="text-4xl font-bold text-center">OAI Paribahan</h2>
+                <p class="text-center pt-5 text-xl">OAI Poribahan strives for sustainable,<br>defficient, and safe transportation, integrating<br>technology, promoting accessibility, and<br>prioritizing customer satisfaction.</p>
                 <div class="flex flex-col-reverse md:flex-row gap-5 mt-10 mb-5">
 
                     <div class="w-full md:w-[80%] shadow-2xl p-5 rounded-xl">
@@ -200,7 +195,7 @@
                             <div class="flex gap-3 items-center">
                                 <div> <img src="./images/bus-logo.png" alt=""></div>
                                 <div>
-                                    <h3 class=" text-2xl md:text-3xl font-bold">Greenline Paribahan</h3>
+                                    <h3 class=" text-2xl md:text-3xl font-bold">OAI Paribahan</h3>
                                     <p class="text-xl pt-2">Coach-009-WEB ! AC_Business</p>
                                 </div>
                             </div>
@@ -208,7 +203,7 @@
                            <div class=" md:mx-0 mx-auto">
                             <a
                             class="btn w-48 font-medium text-color text-xl bg-[#1DD10014] hover:bg-[#1DD10014] border border-[#1DD100] hover:border-[#1DD100] "><img
-                                src="./images/seat-green.png" alt="">40 Seats left
+                                src="./images/seat-green.png" alt=""><span id="fourtysit">40</span> Seats left
                         </a>
                            </div>
 
@@ -241,12 +236,12 @@
 
                     <div class="w-full md:w-[20%] shadow-2xl text-center p-5 rounded-xl mt-10 md:mt-0 md:pt-[10%]">
                         <div class="flex justify-center"> <img src="./images/fare.png" alt=""></div>
-                        <h2 class="text-3xl py-2 font-bold">550 Taka</h2>
+                        <h2 class="text-3xl py-2 font-bold" id="ticketPrice">550 Taka</h2>
                         <p class="text-2xl font-semibold">Per Seat</p>
                     </div>
                 </div>
 
-                <div class="flex flex-col lg:flex-row gap-10 p-5 mt-10 shadow-2xl rounded-xl">
+                <div class="flex flex-col lg:flex-row gap-10 p-5 mt-10 shadow-2xl rounded-xl" id="sit-plane">
                     <div class=" w-full lg:w-[60%]">
                         <h2 class="text-2xl font-semibold">Select Your Seat</h2>
                         <div class="flex justify-between border-y-2 border-dashed py-5 my-5 ">
@@ -426,13 +421,13 @@
                             </div>
                         </div>
                     </div>
-                    <div class="w-full lg:w-[40%]">
+                    <div class="w-full lg:w-[40%]" id="">
                         <h2 class="text-2xl font-semibold">Select Your Seat</h2>
                         <div class="flex justify-between border-t-2 my-5 border-dashed  ">
                         </div>
                         <div class="p-5 bg-slate-100 rounded-xl">
                             <div class="flex justify-between">
-                                <p class="font-inter font-medium">Seat <span></span></p>
+                                <p class="font-inter font-medium" >Seat <span id="sitPlane">0</span></p>
                                 <p class="font-inter font-medium">Class <span></span></p>
                                 <p class="font-inter font-medium">Price <span></span></p>
                             </div>
@@ -440,56 +435,30 @@
                             <div class="flex justify-between border-y-2 my-3 border-dashed  ">
                             </div>
                             <div>
+                                <div id="ticketPrintArea"></div>
                                 <div class="flex justify-between">
-                                    <p class="text-xl font-semibold">Total Price</p>
-                                    <p class="text-xl text-black font-semibold">BDT</p>
+                                    
+
+                                    <p class="text-xl text-black font-semibold">Total Price</p>
+                                    <p class="text-xl font-semibold"><span id="totalBDT">0</span>BDT</p>
                                 </div>
+                                
                                 <div class="join mt-6 w-full pb-5">
-                                    <input id="input-fild" type="text" placeholder="Have any copupon?"
+                                    <input id="input-fild" type="text" placeholder="Have any cupon?"
                                         class="input input-bordered w-[100%] join-item" />
                                     <button id="input-button"
                                         class="btn text-white hover:bg-[#1cd10067]  bg-[#1DD100] join-item">Apply</button>
                                 </div>
                                 <div class="flex justify-between">
                                     <p class="text-xl font-semibold">Grand Price</p>
-                                    <p class="text-xl text-black font-semibold">BDT</p>
+                                    <p class="text-xl text-black font-semibold"><span id="singleBDT">0</span>BDT</p>
                                 </div>
                                 <form action="" class="pt-5">
 
-                                    <div class="py-3"><label for="">Passenger Name*</label></div>
-                                    <label class="input input-bordered flex items-center gap-2">
-                                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" fill="currentColor"
-                                            class="w-4 h-4 opacity-70">
-                                            <path
-                                                d="M8 8a3 3 0 1 0 0-6 3 3 0 0 0 0 6ZM12.735 14c.618 0 1.093-.561.872-1.139a6.002 6.002 0 0 0-11.215 0c-.22.578.254 1.139.872 1.139h9.47Z" />
-                                        </svg>
-                                        <input type="text" class="grow" placeholder="Enter your name" />
-                                    </label>
-
-                                    <div class="py-3"><label for="">Phone Number*</label></div>
-                                    <label class="input input-bordered flex items-center gap-2">
-                                        <input type="text" class="" value="" placeholder="Enter your phone number" />
-                                    </label>
-                                    <div class="py-3"><label for="">Email ID</label></div>
-                                    <label class="input input-bordered flex items-center gap-2">
-                                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" fill="currentColor"
-                                            class="w-4 h-4 opacity-70">
-                                            <path
-                                                d="M2.5 3A1.5 1.5 0 0 0 1 4.5v.793c.026.009.051.02.076.032L7.674 8.51c.206.1.446.1.652 0l6.598-3.185A.755.755 0 0 1 15 5.293V4.5A1.5 1.5 0 0 0 13.5 3h-11Z" />
-                                            <path
-                                                d="M15 6.954 8.978 9.86a2.25 2.25 0 0 1-1.956 0L1 6.954V11.5A1.5 1.5 0 0 0 2.5 13h11a1.5 1.5 0 0 0 1.5-1.5V6.954Z" />
-                                        </svg>
-                                        <input type="text" class="grow" placeholder="Enter your email id" />
-                                    </label>
-
+                                    
                                     <button id="input-button"
                                         class="btn w-full mt-5 text-white hover:text-black hover:bg-[#1cd10067]  bg-[#1DD100] join-item">Next</button>
-
                                 </form>
-                            </div>
-                            <div class="flex justify-between mt-5">
-                                <p class="underline">Terms and Conditions</p>
-                                <p class="underline">Terms and Conditions</p>
                             </div>
 
                         </div>
@@ -497,7 +466,6 @@
                 </div>
             </div>
         </section>
-
     </main>
 
     <footer class="bg-[#030712] py-10 mt-10 md:mt-28 md:py-20">
@@ -505,8 +473,8 @@
             <div>
                 <div class="flex flex-col md:flex-row justify-between">
                     <div class="w-80">
-                        <h2><a class=" text-white text-xl md:text-4xl  font-extrabold ">P-Ticket</a></h2>
-                        <p class="text-white pt-5">P-Ticket is a digital platform to make your daily commuting better.
+                        <h2><a class=" text-white text-xl md:text-4xl  font-extrabold ">OAI-Ticket</a></h2>
+                        <p class="text-white pt-5">OAI-Ticket is a digital platform to make your daily commuting better.
                         </p>
                     </div>
                     <div class="w-[250px]">
@@ -524,7 +492,7 @@
 
 
                 <div class="flex flex-col md:flex-row justify-between border-t-2 mt-10 border-dashed ">
-                    <p class="mt-10 text-white">@all rights reserved, P-Ticket services limited.2024</p>
+                    <p class="mt-10 text-white">@all rights reserved, OAI-Ticket services limited.2024</p>
                     <div class="flex gap-5 flex-wrap mt-3 md:mt-10">
                         <p class="text-white font-medium">Terms & condition</p>
                     <p class="text-white font-medium">Return & refund policy</p>
@@ -540,6 +508,7 @@
             </nav>
         </div>
     </footer>
+    <script src="js/main.js"></script>
 </body>
 
 </html>
